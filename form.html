@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari</title>
+    <link rel="stylesheet" href="./forms_style.css">
+</head>
+
+<body>
+    <h1>Suscriute a la Newsletter</h1>
+    <form action="./form2.html">
+        <!--Obrim una etiqueta de formulari, quan s'envii el formulari es redericcionara a "form2.html"-->
+        <label for="formNom">Nom:</label><br>
+        <input type="text" id="formNom" name="nom" class="amplada_text" required><br><br>
+        <!--Aquest type és per posar text curt, el required es per obligar al usuari a completar aquest camp-->
+
+        <label for="formCorreu">Correu electronic:</label> <br>
+        <input id="formCorreu" type="email" class="amplada_text" required> <br><br>
+        <!--Aquest type és per posar un email-->
+
+        <label for="formTelefon">Telefon:</label><br>
+        <input type="tel" pattern="[0-9]{9}" id="formTelefon" name="telefon" required><br><br>
+        <!--Aquest type es per posar un numero de telefon i el pattern es per posar el numeros que es poden posar-->
+
+        <label for="formLocalitat">Localitat de naixement</label>
+        <select id="formLocalitat" required>
+            <!--Amb el select, creem un desplegable. El required serveix perque sigui obligatori respondre-->
+            <option>Barcelona</option>
+            <option>Badalona</option>
+            <option>Santa Coloma</option>
+        </select><br><br>
+
+        <p>Vull rebre informació sobre...</p><br>
+        <!--Aquesta secció és per donar opcions de caselles quadrades marcables-->
+        <input type="checkbox" id="formNoticies" name="formRebre_info" checked="checked">
+        <!--Mateix  name en aquests inputs perquè estiguin relacionades-->
+        <label for="formNoticies">les últimes noticies</label>
+        <br>
+        <input type="checkbox" id="formRanking" name="formRebre_info">
+        <label for="formRanking">els resultats del ranking de les curses</label>
+        <br>
+        <input type="checkbox" id="formProx_cursa" name="formRebre_info">
+        <label for="formProx_cursa">les properes curses</label>
+        <br><br>
+
+        <p>Vull rebre notificacións sobre tematiques noves:</p> <!--Aqui, creem caselles circulars-->
+        <label for="formTematica_nova">Si</label>
+        <input type="radio" name="formTematica_nova" value="si" checked="checked"><br>
+        <!--Mateix  name en aquests inputs perquè estiguin relacionades-->
+        <label for="formTematica_nova">No</label>
+        <input type="radio" name="formTematica_nova" value="no"><br>
+        <label for="formTematica_nova">Pot ser més tard</label>
+        <input type="radio" name="formTematica_nova" value="Pot ser més tard"><br><br>
+
+        <label for="formComentaris">Comentaris</label><br>
+        <textarea id="formComentaris" rows="5" cols="30" placeholder="Escriu un comentari..."
+            required></textarea><br><br>
+        <!--El textarea serveix per posar una caixa de text i el placeholder perque sorti un text dintre de la caixa-->
+        <div class="boton">
+            <input type="submit" class="boton" value="enviar"> <!--Botó per enviar el formulari-->
+        </div>
+    </form>
+
+</body>
+
+</html>

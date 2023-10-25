@@ -1,0 +1,38 @@
+html {
+    background-color: aquamarine;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*Posem un estil de lletra concret*/
+}
+
+.amplada_text {
+    width: 300px;
+    /*Amb aquesta ordre, donem una establerta màxima*/
+}
+
+#telefon {
+    width: 100px;
+}
+
+.boton {
+    width: 7vw;
+    height: 5vw;
+    background-color: #ffbe76;
+    /*Donem color al fons dels elements*/
+
+}
+
+.boton input {
+    margin: auto;
+    /*margin automàtic*/
+}
+
+.boton :hover {
+    /*Cambia de color el fons quan pases el ratoli per sobre*/
+    background-color: #f0932b;
+}
+
+
+* :focus {
+    /*Cambia de color el fons quan li donas el focus (li donas clic)*/
+    background-color: #bdc3c7;
+}
